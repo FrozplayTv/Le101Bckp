@@ -6,7 +6,7 @@
 /*   By: limangin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/15 19:08:15 by limangin          #+#    #+#             */
-/*   Updated: 2017/09/17 19:24:56 by limangin         ###   ########.fr       */
+/*   Updated: 2017/09/17 19:32:44 by limangin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,7 @@ char	*ft_strrev(char *str)
 	ft_putstr(str);
 	return(str);
 }
+
 
 int	main(int argc, char **argv)
 {
