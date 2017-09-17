@@ -1,0 +1,5 @@
+Credentials cache: API:29670
+        Principal: limangin@LE-101.FR
+
+		  Issued                Expires               Principal
+		  Sep  8 12:36:02 2017  Sep 15 12:35:59 2017  krbtgt/LE-101.FR@LE-101.FR
