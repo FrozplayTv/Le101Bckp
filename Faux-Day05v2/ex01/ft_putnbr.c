@@ -9,23 +9,25 @@
 /*   Updated: 2017/09/20 20:28:59 by limangin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
+intft_putchar(char c);
 
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
-
-void	ft_putnbr(int nb)
+voidft_putnbr(int nb)
 {
 	if (nb < 0)
 	{
 		ft_putchar('-');
 		nb *= -1;
 	}
+	if (nb < 10 && nb > -10)
+		ft_putchar('0' + nb);
+	else if (nb == -2147483648)
+	{
+		ft_putchar('2');
+		nb = 147483648;
+	}
 	if (nb >= 10)
 	{
 		ft_putnbr(nb / 10);
+		ft_putnbr(nb % 10);
 	}
-	ft_putchar((nb % 10) + '0');
 }
