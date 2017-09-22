@@ -6,7 +6,7 @@
 /*   By: limangin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/07 18:52:39 by limangin          #+#    #+#             */
-/*   Updated: 2017/09/22 19:51:52 by limangin         ###   ########.fr       */
+/*   Updated: 2017/09/22 17:06:13 by limangin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,12 @@ void	ft_putchar(char c);
 
 void	ft_putnbr(int nb)
 {
+	if (nb == -2147483648)
+	{
+		ft_putchar('-');
+		ft_putchar('2');
+		nb = 147453648;
+	}
 	if (nb < 0)
 	{
 		ft_putchar('-');

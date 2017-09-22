@@ -1,27 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_is_negative.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: limangin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/07 18:52:39 by limangin          #+#    #+#             */
-/*   Updated: 2017/09/22 19:51:52 by limangin         ###   ########.fr       */
+/*   Created: 2017/09/07 14:03:42 by limangin          #+#    #+#             */
+/*   Updated: 2017/09/15 17:46:49 by limangin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_putchar(char c);
 
-void	ft_putnbr(int nb)
+void	ft_is_negative(int n)
 {
-	if (nb < 0)
-	{
-		ft_putchar('-');
-		nb *= -1;
-	}
-	if (nb >= 10)
-	{
-		ft_putnbr(nb / 10);
-	}
-	ft_putchar((nb % 10) + '0');
+	if (n < 0)
+		ft_putchar('N');
+	if (n >= 0)
+		ft_putchar('P');
 }

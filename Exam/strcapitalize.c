@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   strcapitalize.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: limangin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/07 18:52:39 by limangin          #+#    #+#             */
-/*   Updated: 2017/09/22 19:51:52 by limangin         ###   ########.fr       */
+/*   Created: 2017/09/22 19:56:02 by limangin          #+#    #+#             */
+/*   Updated: 2017/09/22 19:56:21 by limangin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-void	ft_putchar(char c);
-
-void	ft_putnbr(int nb)
+char	*ft_strcapitalize(char *str)
 {
-	if (nb < 0)
+	int i;
+
+	i = 0;
+	while (str[i])
 	{
-		ft_putchar('-');
-		nb *= -1;
+		if (str	[i] == ' ' || str[i] == '+' || str[i] == '-')
+			i++;
+		if (str[i] >= 'a' && str[i] <= 'z')
+			str[i] = str[i] - 32;
+		i++;
 	}
-	if (nb >= 10)
-	{
-		ft_putnbr(nb / 10);
-	}
-	ft_putchar((nb % 10) + '0');
+	return (str);
 }
+

@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: limangin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/07 18:52:39 by limangin          #+#    #+#             */
-/*   Updated: 2017/09/22 19:51:52 by limangin         ###   ########.fr       */
+/*   Created: 2017/09/07 14:03:23 by limangin          #+#    #+#             */
+/*   Updated: 2017/09/15 17:46:39 by limangin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_putchar(char c);
 
-void	ft_putnbr(int nb)
+void	ft_print_numbers(void)
 {
-	if (nb < 0)
+	char c;
+
+	c = 48;
+	while (c <= 57)
 	{
-		ft_putchar('-');
-		nb *= -1;
+		ft_putchar(c);
+		c++;
 	}
-	if (nb >= 10)
-	{
-		ft_putnbr(nb / 10);
-	}
-	ft_putchar((nb % 10) + '0');
 }

@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   strcmp.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: limangin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/07 18:52:39 by limangin          #+#    #+#             */
-/*   Updated: 2017/09/22 19:51:52 by limangin         ###   ########.fr       */
+/*   Created: 2017/09/22 19:53:14 by limangin          #+#    #+#             */
+/*   Updated: 2017/09/22 19:53:31 by limangin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
-
-void	ft_putnbr(int nb)
+int	ft_strcmp(char *s1, char *s2)
 {
-	if (nb < 0)
+	while (*s1 == *s2)
 	{
-		ft_putchar('-');
-		nb *= -1;
+		if (*s1 ==	 '\0')
+			return (0);
+		s1++;
+		s2++;
 	}
-	if (nb >= 10)
-	{
-		ft_putnbr(nb / 10);
-	}
-	ft_putchar((nb % 10) + '0');
+	if (*s1 != *s2)
+		return (*s1 - *s2);
+	return (0);
 }
